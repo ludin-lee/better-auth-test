@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export function proxy(request: NextRequest) {
-  console.log("AAAAAAA")
     const ua = request.headers.get('user-agent') || ''
 
 
