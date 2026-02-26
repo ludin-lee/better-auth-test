@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { authClient } from "@/app/lib/auth-client";
+import Link from "next/link";
 
 export default function AuthTest() {
   const [email, setEmail] = useState("");
@@ -112,12 +113,20 @@ export default function AuthTest() {
           )}
           <p>이름: {session.user.name}</p>
           <p>이메일: {session.user.email}</p>
-          <button
-            className="bg-red-500 text-white p-2 mt-4 rounded"
-            onClick={handleSignOut}
-          >
-            로그아웃
-          </button>
+          <div className="flex gap-2 mt-4">
+            <Link
+              href="/mypage"
+              className="bg-blue-500 text-white p-2 rounded flex-1 text-center hover:bg-blue-600 transition-colors"
+            >
+              마이페이지
+            </Link>
+            <button
+              className="bg-red-500 text-white p-2 rounded flex-1"
+              onClick={handleSignOut}
+            >
+              로그아웃
+            </button>
+          </div>
         </div>
       ) : (
         // 로그인 전 보여줄 화면
