@@ -61,6 +61,43 @@ export default function AuthTest() {
   return (
     <div className="p-10 flex flex-col gap-4 max-w-md text-white">
       <h1 className="text-2xl font-bold">Better Auth 테스트</h1>
+      
+      <div className="bg-gray-800 p-4 rounded-lg">
+        <h2 className="text-lg font-semibold mb-2 text-blue-400">🔐 제공 기능</h2>
+        <div className="space-y-2 text-sm">
+          <p className="flex items-start gap-2">
+            <span className="text-green-400">✓</span>
+            <span><strong>이메일 회원가입</strong> - 이름, 이메일, 비밀번호로 간편한 계정 생성</span>
+          </p>
+          <p className="flex items-start gap-2">
+            <span className="text-green-400">✓</span>
+            <span><strong>이메일 로그인</strong> - 이메일과 비밀번호로 안전한 인증</span>
+          </p>
+          <p className="flex items-start gap-2">
+            <span className="text-green-400">✓</span>
+            <span><strong>소셜 로그인</strong> - GitHub, KaKao 계정으로 빠른 로그인</span>
+          </p>
+          <p className="flex items-start gap-2">
+            <span className="text-green-400">✓</span>
+            <span><strong>세션 관리</strong> - 자동 세션 유지 및 상태 관리</span>
+          </p>
+          <p className="flex items-start gap-2">
+            <span className="text-green-400">✓</span>
+            <span><strong>프로필 정보</strong> - 사용자 이름, 이메일, 프로필 이미지 표시</span>
+          </p>
+          <p className="flex items-start gap-2">
+            <span className="text-green-400">✓</span>
+            <span><strong>안전한 로그아웃</strong> - 세션 안전 종료</span>
+          </p>
+        </div>
+        
+        <div className="mt-3 pt-3 border-t border-gray-700">
+          <p className="text-xs text-gray-400">
+            <strong>Better Auth</strong> 기반의 현대적 인증 시스템 테스트 페이지입니다.
+            다양한 로그인 방식을 지원하며 안전하고 빠른 사용자 인증을 제공합니다.
+          </p>
+        </div>
+      </div>
 
       {session ? (
         // 로그인 성공 시 보여줄 화면
